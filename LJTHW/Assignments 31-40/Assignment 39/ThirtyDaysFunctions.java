@@ -19,7 +19,7 @@ public class ThirtyDaysFunctions {
 	*
 	* @author Coog
 	* @param month 	the month number (1-12).
-	* @return a 	String containing the English name for the given month, or "error" if month is out of range.
+	* @return 	String containing the English name for the given month, or "error" if month is out of range.
 	*/
 
 	public static String monthName(int month) {
