@@ -41,4 +41,9 @@ public class Account
 	{
 		return name; // return value of name to caller
 	} // end method getName
+
+	public void displayAccount()
+	{
+		System.out.printf("%s balance: $%.2f%n", name, balance);
+	}
 } // end class Account

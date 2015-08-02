@@ -6,32 +6,32 @@ public class AccountTest
 {
 	public static void main(String[] args)
 	{
-		// Create a Scanner object to obtain input from the command window.
+		Account account1 = new Account("Jane Green", 50.00);
+		Account account2 = new Account("John Blue", -7.53);
+
+		// display initial balance of each object
+		account1.displayAccount();
+		account2.displayAccount();
+
+		// create a Scanner object to obtain input from the command window
 		Scanner keyboard = new Scanner(System.in);
 
-		// Constructing an account with Nothing in it.
-		Account myAccount = new Account(null, 0.0);
+		System.out.print("Enter deposit amount for account1:  "); // prompt
+		double depositAmount = keyboard.nextDouble(); // obtain user input
+		System.out.printf("%nadding %.2f to account1 balance%n%n", depositAmount);
+		account1.deposit(depositAmount); //add to account1's balance
 
-		// display initial value of name (null)
-		System.out.printf("Initial name is : %s%n%n", myAccount.getName());
+		// display balances
+		account1.displayAccount();
+		account2.displayAccount();
 
-		// prompt for and read name
-		System.out.println("Please enter the name:");
-		String theName = keyboard.nextLine(); // read a line of text
-		myAccount.setName(theName); // put theName in myAccount
-		System.out.println(); // blank line
+		System.out.print("Enter deposit amount for account2:  "); // prompt
+		depositAmount = keyboard.nextDouble(); // obtain user input
+		System.out.printf("%nadding %.2f to account2 balance%n%n", depositAmount);
+		account2.deposit(depositAmount); //add to account2's balance
 
-		// display the name stored in object myAccount
-		System.out.printf("Name in object myAccount is:%n%s%n", myAccount.getName());
-
-		// Using the Account constructor to initialize the name instance variable at the time each Account object is created
-		// create two account objects
-		Account account1 = new Account("Jake Doe", 4.32);
-		Account account2 = new Account("Jane Green", 5323.32);
-
-		// display initial value of name for each Account
-		System.out.printf("account name is: %s%n", account1.getName());
-		System.out.printf("account name is: %s%n", account2.getName());
-		System.out.println(account2.getName() + " has " + account2.getBalance() + " dollars.");
-	}
+		// display balances
+		account1.displayAccount();
+		account2.displayAccount();
+	} // end main
 } // end class AccountTest
