@@ -24,6 +24,21 @@ public class Account
 			balance += depositAmount; // add depositAmount to balance
 	} // end method deposit
 
+	// method that withdraws (subtracts) only a valid amount from the balance
+	public void withdraw(double withdrawAmount)
+	{
+		if (withdrawAmount <= balance) // if the withdraw amount is valid
+		{
+			System.out.printf("%nwithdrawing %.2f from account balance%n%n", withdrawAmount); // let's user know the amount is valid
+			balance -= withdrawAmount; // subtract withdrawAmount from balance
+		}
+		else // if the withdraw amount is not valid
+		{
+			System.out.println("Withdrawal amount exceeded account balance.\n\n");
+		}
+
+	}
+
 	// method returns the account balance
 	public double getBalance()
 	{
@@ -42,8 +57,10 @@ public class Account
 		return name; // return value of name to caller
 	} // end method getName
 
+	// method to display account information
 	public void displayAccount()
 	{
-		System.out.printf("%s balance: $%.2f%n", name, balance);
-	}
+		System.out.printf("%s balance: $%.2f%n", name, balance); // print out account information
+	} // end method displayAccount
+
 } // end class Account
