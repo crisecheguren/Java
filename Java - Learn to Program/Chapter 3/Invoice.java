@@ -34,7 +34,7 @@ public class Invoice
 	// display invoice method
 	public void displayInvoice()
 	{
-		System.out.printf("Part Number:  %s%nDescription:  %s%n%nQuantity:  %d%n%nPrice:  $%.2f%n%n", partNumber, description, quantity, price);
+		System.out.printf("Part Number:  %s%n%nDescription:  %s%n%nQuantity:  %d%n%nPrice:  $%.2f%n%n", partNumber, description, quantity, price);
 	} // end method displayInvoice
 
 	// method to set the part number
@@ -47,5 +47,51 @@ public class Invoice
 	public String getPartNumber()
 	{
 		return partNumber; // return value of partNumber to caller
+	} // end method getPartNumber
+
+	// method to set the description
+	public void setDescription(String description)
+	{
+		this.description = description;
+	} // end method setDescription
+
+	// method to get the description
+	public String getDescription()
+	{
+		return description;
+	} // end method getDescription
+
+	// method to set the quantity
+	public void setQuantity(int quantity)
+	{
+		this.quantity = quantity;
+	} // end method setQuantity
+
+	// method to get the quantity
+	public int getQuantity()
+	{
+		return quantity;
+	} // end method getQuantity
+
+	// method to set the price
+	public void setPrice(double price)
+	{
+		this.price = price;
+	} // end method setPrice
+
+	// method to getPrice
+	public double getPrice()
+	{
+		return price;
+	} // end method getPrice
+
+	public double getInvoiceAmount()
+	{
+		if (quantity < 0)
+			quantity = 0;
+		if (price < 0.0)
+			price = 0.0;
+		return quantity * price;
 	}
+
 } // end class invoice
