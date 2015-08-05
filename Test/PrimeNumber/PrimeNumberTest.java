@@ -18,6 +18,6 @@ public class PrimeNumberTest {
   	}
 
   	System.out.println("primeCount is " + primeCount);
-	assertEquals(25, primeCount);
+	  assertEquals(25, primeCount);
   }
 }
