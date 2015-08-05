@@ -15,6 +15,8 @@ public class DrawPanel extends JPanel
 		int steps2 = height / 15;
 		// draw a line from the upper-left to the lower-right
 
+
+
 		for (int i = 1; i < 15; i++) {
 			g.drawLine(0, 0, steps1, height);
 			steps1 += 35;
