@@ -7,7 +7,7 @@ public class Prime
 		// number to divide
 		for(int i = 1; i < 100; i++)
 		{
-
+			// flag for Primeness
 			boolean isPrime = true;
 
 			// number to divide by
